@@ -1,0 +1,381 @@
+/* style.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden; /* Prevent scrollbars from animations */
+}
+
+#app-container {
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Landing Page Styles */
+.landing-page {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #FFDEE9, #B5FFFC);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cake-background {
+    font-size: 20rem; /* Increased size 4x */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    opacity: 0.5; /* Reduced opacity */
+}
+
+.balloons-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.balloon {
+    position: absolute;
+    bottom: -150px; /* Start off-screen */
+    width: 50px;
+    height: 70px;
+    border-radius: 50%;
+    animation: float 10s infinite ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-120vh) rotate(45deg); /* Ensure it goes well off-screen */
+    }
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+.landing-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.birthday-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #FF6F61;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+    margin-bottom: 2rem;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: #6B5B95;
+    margin-top: 1rem;
+    z-index: 2;
+    opacity: 0.9;
+}
+
+.start-button {
+    background-color: #88B04B;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-top: 2rem;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.start-button:hover {
+    background-color: #6B5B95;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* Questionnaire Styles */
+.questionnaire {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    padding: 2rem;
+    transition: all 0.5s ease;
+}
+
+.questionnaire-container {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem 3rem;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.questionnaire-title {
+    font-family: 'Bungee', cursive;
+    font-size: 2rem;
+    color: #667eea;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.question {
+    margin-bottom: 1rem;
+}
+
+.question-label {
+    display: block;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.options-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.option-button {
+    background-color: #f0f8ff;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    color: #007bff;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-grow: 1;
+    min-width: 40%;
+}
+
+.option-button:hover {
+    background-color: #007bff;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.option-button:disabled {
+    background-color: #e9ecef;
+    color: #6c757d;
+    cursor: not-allowed;
+    border-color: #ced4da;
+    transform: none;
+}
+
+.feedback {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+    height: 2rem;
+    margin-top: 1.5rem;
+}
+.feedback .correct { color: #28a745; }
+.feedback .incorrect { color: #dc3545; }
+
+
+/* Photo Collage Styles */
+.photo-collage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center vertically */
+    min-height: 100vh;
+    padding: 2rem;
+    transition: background 0.5s ease;
+    position: relative;
+    overflow: hidden; /* Contain hovering photos */
+}
+
+.photo-container {
+    flex-grow: 1; /* Take up available space */
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo-item {
+    width: 180px;
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: absolute; /* Needed for GSAP positioning */
+    cursor: pointer;
+    will-change: transform; /* Performance optimization */
+}
+
+.photo-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+    border-radius: 0 0 10px 10px;
+    pointer-events: none; /* Prevent caption from blocking hover */
+}
+
+/* Dynamic Themes */
+.theme-retro { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+.theme-retro .photo-item { border: 3px solid #feca57; box-shadow: 0 0 20px rgba(254, 202, 87, 0.5); }
+
+.theme-vintage { background: linear-gradient(135deg, #d4ccc5 0%, #b3a59d 100%); }
+.theme-vintage .photo-item { border: 10px solid white; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); filter: sepia(0.3); }
+
+.theme-cosmic { background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%); }
+.theme-cosmic .photo-item { border: 2px solid #48dbfb; box-shadow: 0 0 30px rgba(72, 219, 251, 0.5); }
+
+.theme-modern { background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); }
+.theme-modern .photo-item { border-radius: 4px; border: 2px solid white; box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23); }
+
+/* Lightbox Modal */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 2rem;
+}
+
+.lightbox-content {
+    max-width: 90vw;
+    max-height: 90vh;
+    position: relative;
+    text-align: center;
+}
+
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 80vh;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+.lightbox-caption {
+    color: white;
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    background: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.8rem;
+    line-height: 1;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    z-index: 1001;
+}
+.lightbox-close:hover {
+    transform: scale(1.1);
+}
+
+/* Final Page */
+.final-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fad0c4 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+}
+
+.final-message {
+    font-family: 'Bungee', cursive;
+    font-size: 3rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 2rem;
+}
+
+.final-text {
+    font-size: 1.5rem;
+    color: white;
+    max-width: 600px;
+    line-height: 1.8;
+}
+
+.continue-button {
+    margin-top: auto; /* Push to the bottom */
+    margin-bottom: 1rem; /* Spacing from edge */
+    background: #88B04B;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 5; /* Ensure it's above photos */
+}
+
+.continue-button:hover {
+    background: #6B5B95;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .birthday-title { font-size: 2.5rem; }
+    .subtitle { font-size: 1.2rem; }
+    .photo-item { width: 120px; height: 120px; }
+    .option-button { min-width: 80%; }
+    .questionnaire-container { padding: 1.5rem; }
+}
