@@ -10,7 +10,7 @@ const JOURNEY_DATA = [
         questions: [
             { 
                 id: 'q1', 
-                text: 'How many different countries did LK visit?', 
+                text: 'How many different countries did Kanth visit?', 
                 type: 'mcq',
                 options: ['2-5', '6-10', '11-15' , 'more than 15'],
                 correctAnswer: 'more than 15'
@@ -24,83 +24,97 @@ const JOURNEY_DATA = [
             }
         ],
         photos: [
-            { id: 'p1', src: 'image.png', caption: 'The fashion era we all remember fondly' },
-            { id: 'p2', src: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400', caption: 'Pizza: the eternal birthday companion' }
+            { id: 'p1', src: 'Camel_Traveller.jpg', caption: 'Dessert Explorer' },
+            { id: 'p2', src: 'kerala.jpg', caption: 'Lake Conqueror Part 1: Kerala' },
+            { id: 'p3', src: 'Lake_Traveller.jpg', caption: 'Lake Conqueror Part 2 : Udaipur' },
+            { id: 'p4', src: 'Temple_Traveller.jpg', caption: 'Temples of the Dessert' },
+            { id: 'p5', src: 'Warangal_Traveller.jpg', caption: 'Lake Conqueror Part 3 : Warangal' },
         ]
     },
     {
         id: 2,
         theme: 'vintage',
-        questionnaireTitle: 'Memory Lane Chronicles',
+        questionnaireTitle: 'Athlete',
         questions: [
             { 
                 id: 'q1', 
-                text: 'Favorite childhood cartoon?', 
+                text: 'How many full marathons has Kanth completed?', 
                 type: 'mcq',
-                options: ['Tom & Jerry', 'Scooby-Doo', 'Looney Tunes', 'Other'],
-                correctAnswer: 'Tom & Jerry'
+                options: ['atleast 2', 'atleast 3', 'atleast 4', 'atleast 5'],
+                correctAnswer: 'atleast 3'
             },
             { 
                 id: 'q2', 
-                text: 'Most embarrassing moment from school?', 
+                text: 'How frequently does Kanth work out/stay active in a week?', 
                 type: 'mcq',
-                options: ['Forgot homework', 'Fell in class', 'Called teacher mom', 'Other'],
-                correctAnswer: 'Called teacher mom'
+                options: ['3 times', '4 times', '😮‍💨 everyday'],
+                correctAnswer: '😮‍💨 everyday'
+            },
+            { 
+                id: 'q3', 
+                text: 'Despite all that, what is his waist size?😊', 
+                type: 'mcq',
+                options: ['32 inch', '30 inch', '😮 More than 34 inch'],
+                correctAnswer: '😮 More than 34 inch'
             }
         ],
         photos: [
-            { id: 'p1', src: 'https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=400', caption: 'Memories captured in time' },
-            { id: 'p2', src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400', caption: 'Adventures that shaped us' }
+            { id: 'p1', src: 'Badminton_Sports.jpg', caption: 'Torturing Team members on court also' },
+            { id: 'p2', src: 'Hyd_Marathon.jpg', caption: 'Marathon Finish 1' },
+            { id: 'p3', src: 'Hyd_Run.jpg', caption: 'Run Finish 2' },
+            { id: 'p4', src: 'Ice_Sports.jpg', caption: 'Woah Icy' },
+            { id: 'p5', src: 'Mumbai_marathon.png', caption: 'Marathon Finish 2: Mumbai' }
         ]
     },
     {
         id: 3,
         theme: 'cosmic',
-        questionnaireTitle: 'Galactic Reflections',
+        questionnaireTitle: 'OverAchiever',
         questions: [
             { 
                 id: 'q1', 
-                text: 'If you could travel anywhere, where would you go?', 
+                text: 'Kanth\'s EAMCET Rank?', 
                 type: 'mcq',
-                options: ['Mars', 'Moon', 'Saturn', 'Other'],
-                correctAnswer: 'Mars'
+                options: ['< 300', ' < 500', '< 1000', '< 5000'],
+                correctAnswer: '< 300'
             },
             { 
                 id: 'q2', 
-                text: 'Dream superpower?', 
+                text: 'Which of the following did Kanth achieve?', 
                 type: 'mcq',
-                options: ['Invisibility', 'Flying', 'Time travel', 'Other'],
-                correctAnswer: 'Time travel'
+                options: ['UPSC-IRS', 'IIT-M Gold Medal', 'IIM MBA Grad', '😮‍💨😮‍💨😮‍💨 All, Hard to match'],
+                correctAnswer: '😮‍💨😮‍💨😮‍💨 All, Hard to match'
             }
         ],
         photos: [
-            { id: 'p1', src: 'https://images.unsplash.com/photo-141924290_2214-272b3f66ee7a?w=400', caption: 'Reaching for the stars' },
-            { id: 'p2', src: 'https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?w=400', caption: 'Cosmic dreams and aspirations' }
+            { id: 'p1', src: 'IESA_Qcomm.jpg', caption: 'Reaching for the stars' },
+            { id: 'p2', src: 'Awards_Qcomm.jpg', caption: 'So many Qcomm wafers' }
         ]
     },
     {
         id: 4,
         theme: 'modern',
-        questionnaireTitle: 'Today’s Trends',
+        questionnaireTitle: 'Bonus',
         questions: [
             { 
                 id: 'q1', 
-                text: 'Favorite social media platform?', 
+                text: 'After going through many of Kanth\'s pictures, one quirk was identified. Guess what it is?', 
                 type: 'mcq',
-                options: ['Instagram', 'TikTok', 'Twitter', 'Other'],
-                correctAnswer: 'Instagram'
-            },
-            { 
-                id: 'q2', 
-                text: 'Go-to streaming service?', 
-                type: 'mcq',
-                options: ['Netflix', 'Hulu', 'Disney+', 'Other'],
-                correctAnswer: 'Netflix'
+                options: ['Clicks a selfie everywhere', 'Looks at camera with 😑 face', 'Clicks funny pictures of Ammu', 'All?'],
+                correctAnswer: 'Clicks a selfie everywhere'
             }
         ],
         photos: [
-            { id: 'p1', src: 'https://images.unsplash.com/photo-1551232864-3f0890e58e35?w=500', caption: 'Modern vibes' },
-            { id: 'p2', src: 'https://images.unsplash.com/photo-1558981403-c5f9899a28bc?w=500', caption: 'Trendy moments' }
+            { id: 'p1', src: 'Selfie_Covid.jpg', caption: 'COVID may come and go, but selfie-fever, stays forever.' },
+            { id: 'p2', src: 'Selfie_AIgen.jpg', caption: 'Can make a normally clicked selfie, look like it\'s AI generated.' },
+            { id: 'p3', src: 'Selfie_Chutney.jpg', caption: 'Always irritated Chutney, even in Kanth\'s infamous selfies.' },
+            { id: 'p4', src: 'Selfie_Fam.jpg', caption: 'Selfie can\'t be bad if Potato is in it :)' },
+            { id: 'p5', src: 'Selfie_Hill.jpg', caption: 'Selfie at Hill also' },
+            { id: 'p6', src: 'Selfie_randomly.jpg', caption: 'Just your everyday Selfie, cuz why not?' },
+            { id: 'p7', src: 'Selfie_Sea.jpg', caption: 'Selfie at Sea also' },
+            { id: 'p8', src: 'Selfie_Theatre.jpg', caption: 'Even in a dark theatre, Kanth finds a way to click a selfie :)' },
+            { id: 'p9', src: 'Selfie_Train.jpg', caption: 'Selfie with a Train also' },
+            { id: 'p10', src: 'Selfie_Waterfall.jpg', caption: 'Selfie at Waterfall also' }
         ]
     }
 ];
@@ -311,7 +325,7 @@ function showPhotoCollage(stage) {
             opacity: 1,
             duration: 1.2,
             ease: 'power2.out',
-            delay: Math.random() * 0.2
+            delay: Math.random() * 0.05
         });
 
         // 3. Create the continuous hover animation based on the resting position.
@@ -351,6 +365,26 @@ function showPhotoCollage(stage) {
             showLightbox({
                 src: photo.dataset.src,
                 caption: photo.dataset.caption
+            });
+        });
+    });
+
+    const photoItems = document.querySelectorAll('.photo-item');
+    photoItems.forEach(photoItem => {
+        photoItem.addEventListener('click', () => {
+            const previewModal = document.createElement('div');
+            previewModal.className = 'photo-preview-modal';
+            previewModal.innerHTML = `
+                <div class="modal-content">
+                    <img src="${photoItem.dataset.src}" alt="Photo Preview">
+                    <p>${photoItem.dataset.caption}</p>
+                    <button class="close-modal">Close</button>
+                </div>
+            `;
+            document.body.appendChild(previewModal);
+
+            previewModal.querySelector('.close-modal').addEventListener('click', () => {
+                document.body.removeChild(previewModal);
             });
         });
     });
@@ -401,8 +435,7 @@ function renderFinalPage() {
         <div class="final-page">
             <h1 class="final-message">👍 You Made It! 👍</h1>
             <p class="final-text">
-                What an amazing journey through memories! Here's to another year of adventures, laughter, and unforgettable moments. May your day be filled with joy and your year ahead be extraordinary!
-            </p>
+                Here's to another year of adventures, laughter, and unforgettable moments. May your year ahead be extraordinary!. Happy Birthday!            </p>
         </div>
     `;
 
